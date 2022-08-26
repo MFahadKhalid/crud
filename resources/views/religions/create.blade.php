@@ -28,6 +28,7 @@
                 <div class="mt-3 col-md-12">
                         <label for="name"><b>Name</b></label>
                         <input type="text" name="name" required class="form-control"style="border:3px groove #28a745" value="{{old('name')}}">
+                        <small class="text-danger">@error('name')  {{$message}} @enderror</small>
                     </div>
                     <div class="mt-3 col-md-12">
                         <label><b>Status</b></label>
