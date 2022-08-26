@@ -11,24 +11,25 @@ use App\Models\Student;
 class StudentController extends Controller
 {
     public function index(){
+        $students = Student::get();
+        return view('students.index' , compact('students'));
+    }
+    public function create(){
         $countries = Country::get();
         $teachers = Teacher::get();
         $religions = Religion::get();
         $students = Student::get();
-        return view('students.index' , compact('countries','teachers','religions','students'));
-    }
-    public function create(){
-        return view('students.create');
+        return view('students.create' , compact('countries','teachers','religions','students'));
     }
     public function store(Request $request){
         $request->validate([
             'name' => 'required|max:191|unique:students,name',
-            'age' => 'required|max:191|unique:students,age',
+            'age' => 'required|max:191|:students,age',
             'email' => 'required|max:191|unique:students,email',
             'phone' => 'required|max:191|unique:students,phone',
-            'country' => 'required|max:191|unique:students,country',
-            'teacher' => 'required|max:191|unique:students,teacher',
-            'religion' => 'required|max:191|unique:students,religion',
+            'country' => 'required|max:191|:students,country',
+            'teacher' => 'required|max:191|:students,teacher',
+            'religion' => 'required|max:191|:students,religion',
         ]);
         if($request->file('student')){
             $student = $request->file('student');
@@ -38,7 +39,7 @@ class StudentController extends Controller
         $store = Student::create([
             'name' =>$request->name,
             'age' =>$request->age,
-            'eamil' =>$request->eamil,
+            'email' =>$request->email,
             'phone' =>$request->phone,
             'country' =>$request->country,
             'teacher' =>$request->teacher,

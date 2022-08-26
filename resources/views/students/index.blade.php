@@ -31,8 +31,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                        @foreach($students as $student)
+                @foreach($students as $student)
+                    <tr>
                         <td>{{ $student->id }}</td>
                         <td>{{ $student->name }}</td>
                         <td>{{ $student->age }}</td>
@@ -41,9 +41,9 @@
                         <td>{{ $student->country }}</td>
                         <td>{{ $student->teacher }}</td>
                         <td>{{ $student->religion }}</td>
-                        <td>{{ $student->student }}</td>
-                        @endforeach
+                        <td style="width:10%"><img class="rounded img-thumbnail" src="{{asset('upload/student/'.$student->student)}}" alt="" width="100%"></td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

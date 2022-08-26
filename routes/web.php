@@ -45,4 +45,4 @@ Route::get('religions/{id}/delete', [ReligionController::class, 'delete'])->name
 //student
 Route::get('students' , [StudentController::class , 'index'])->name('students.index');
 Route::get('students/create' , [StudentController::class , 'create'])->name('students.create');
-Route::get('students/store' , [StudentController::class , 'store'])->name('students.store');
+Route::post('students/store' , [StudentController::class , 'store'])->name('students.store');
