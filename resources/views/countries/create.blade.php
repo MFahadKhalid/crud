@@ -31,22 +31,22 @@
                     </div>
                     <div class="mt-3 col-md-6">
                         <label>Name</label>
-                        <input type="text" name="name" class="form-control" style="border:3px groove gold; value="{{old('name')}}">
+                        <input type="text" name="name" class="form-control" style="border:3px groove gold;" value="{{old('name')}}">
                         <small class="text-danger">@error('name')  {{$message}} @enderror</small>
                     </div>
                     <div class="mt-3 col-md-6">
                         <label>Code</label>
-                        <input type="code" name="code" class="form-control" style="border:3px groove gold; value="{{old('code')}}">
+                        <input type="code" name="code" class="form-control" style="border:3px groove gold;" value="{{old('code')}}">
                         <small class="text-danger">@error('code')  {{$message}} @enderror</small>
                     </div>
                     <div class="mt-3 col-md-6">
                         <label>Population</label>
-                        <input type="text" name="population" class="form-control" style="border:3px groove gold; value="{{old('population')}}">
+                        <input type="text" name="population" class="form-control" style="border:3px groove gold;" value="{{old('population')}}">
                         <small class="text-danger">@error('population')  {{$message}} @enderror</small>
                     </div>
                     <div class="mt-3 col-md-6">
                         <label>Status</label>
-                        <select name="status"  class="form-control" style="border:3px groove gold; >
+                        <select name="status"  class="form-control" style="border:3px groove gold; ">
                             <option value="">Please Select</option>
                             <option value="1" @if(old("status") == 1) selected @endif>Active</option>
                             <option value="0" @if(old("status") == 0) selected @endif>Deactive</option>
