@@ -19,7 +19,7 @@ class CountryController extends Controller
         $request->validate([
             'name' => 'required|max:191|unique:countries,name',
             'code' => 'required|max:11|unique:countries,code',
-            'population' => 'required|max:11|unique:countries,population',
+            'population' => 'required|max:11|:countries,population',
             'status' => 'required',
         ]);
         

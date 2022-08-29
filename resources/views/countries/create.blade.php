@@ -32,17 +32,17 @@
                     <div class="mt-3 col-md-6">
                         <label>Name</label>
                         <input type="text" name="name" class="form-control" style="border:3px groove gold;" value="{{old('name')}}">
-                        <small class="text-danger">@error('name')  {{$message}} @enderror</small>
+                        <small class="text-light">@error('name')  {{$message}} @enderror</small>
                     </div>
                     <div class="mt-3 col-md-6">
                         <label>Code</label>
                         <input type="code" name="code" class="form-control" style="border:3px groove gold;" value="{{old('code')}}">
-                        <small class="text-danger">@error('code')  {{$message}} @enderror</small>
+                        <small class="text-light">@error('code')  {{$message}} @enderror</small>
                     </div>
                     <div class="mt-3 col-md-6">
                         <label>Population</label>
                         <input type="text" name="population" class="form-control" style="border:3px groove gold;" value="{{old('population')}}">
-                        <small class="text-danger">@error('population')  {{$message}} @enderror</small>
+                        <small class="text-light">@error('population')  {{$message}} @enderror</small>
                     </div>
                     <div class="mt-3 col-md-6">
                         <label>Status</label>
@@ -51,7 +51,7 @@
                             <option value="1" @if(old("status") == 1) selected @endif>Active</option>
                             <option value="0" @if(old("status") == 0) selected @endif>Deactive</option>
                         </select>
-                        <small class="text-danger">@error('status')  {{$message}} @enderror</small>
+                        <small class="text-light">@error('status')  {{$message}} @enderror</small>
                     </div>
                     <div class="mt-3 col-md-12 mt-3">
                         <button type="submit" class="btn btn-primary btn-block bg-warning">ADD NEW</button>
