@@ -42,30 +42,30 @@
                         </div>
                         <div class="mt-3 col-md-6">
                             <label for="country">Country</label>
-                            <select name="country" class="form-control" value="{{old('country')}}">
+                            <select name="country" class="form-control">
                                 <option value="">Please Select</option>
                                 @foreach($countries as $country)
-                                    <option value="{{ $country->id }}">{{ $country->name }}</option>
+                                    <option value="{{ $country->id }}" @if(old("country")) selected @endif>{{ $country->name }}</option>
                                 @endforeach
                             </select>
                             <small class="text-danger">@error('country'){{$message}} @enderror</small>
                         </div>
                         <div class="mt-3 col-md-6">
                             <label for="teacher">Teacher</label>
-                            <select name="teacher" class="form-control" value="{{old('teacher')}}">
+                            <select name="teacher" class="form-control">
                                 <option value="">Please Select</option>
                                 @foreach($teachers as $teacher)
-                                    <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
+                                    <option value="{{ $teacher->id }}" @if(old("teacher")) selected @endif>{{ $teacher->name }}</option>
                                 @endforeach
                             </select>
                             <small class="text-danger">@error('teacher'){{$message}} @enderror</small>
                         </div>
                         <div class="mt-3 col-md-6">
                             <label for="religion">Religion</label>
-                            <select name="religion" class="form-control" value="{{old('religion')}}">
+                            <select name="religion" class="form-control">
                                 <option value="">Please Select</option>
                                 @foreach($religions as $religion)
-                                    <option value="{{ $religion->id }}">{{ $religion->name }}</option>
+                                    <option value="{{ $religion->id }}" @if(old("religion")) selected @endif>{{ $religion->name }}</option>
                                 @endforeach
                             </select>
                             <small class="text-danger">@error('religion'){{$message}} @enderror</small>
